@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>Video playlist </title>
+        <link rel="stylesheet" href="video.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Entertainment video</h1>
+            <div class="row">
+                <div class="col">
+                    <div class="feature-img">
+                        <img src="video/tom.jpg" width="100%">
+                        <img src="video/play.png" class="play-btn" onclick="playVideo('video/tom1.mp4')">
+                    </div>
+                </div>
+                <div class="col">
+                    
+                    <div class="small-img-row">
+                        <div class="small-img">
+                            <img src="video/tom.jpg" width="50%">
+                            <img src="video/play.png" class="play-btn"onclick="playVideo('video/tom2.mp4')">
+                        </div>
+                        <p>Enjoy your day with tom and jerry</p>
+
+                    </div>
+                    <div class="small-img-row">
+                        <div class="small-img">
+                            <img src="video/penqueen.jpg" width="50%">
+                            <img src="video/play.png" class="play-btn" onclick="playVideo('video/pen.mp4')">
+                        </div>
+                        <p>Enjoy your day with The  Penquins of madagascar</p>
+
+                    </div>
+                    <div class="small-img-row">
+                        <div class="small-img">
+                            <img src="video/bean.jpg" width="50%">
+                            <img src="video/play.png" class="play-btn" onclick="playVideo('video/been.mp4')">
+                        </div>
+                        <p>Enjoy your day with Mr.Bean </p>
+
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+        <div class="video-player" id="videoPlayer">
+            <video width="100%" controls autoplay id="myVideo">
+                <source src="video/tom1.mp4" type="Video/mp4">
+            </video>
+            <img src="video/close.png" class="close-btn" onclick="stopVideo()">
+        </div>
+        <script>
+
+var videoPlayer = document.getElementById("videoPlayer");
+var myVideo = document.getElementById("myVideo");
+function stopVideo(){
+    videoPlayer.style.display ="none";
+}
+function playVideo(file){
+    myVideo.src=file;
+    videoPlayer.style.display="block";
+}
+
+        </script>
+
+    </body>
+</html>
